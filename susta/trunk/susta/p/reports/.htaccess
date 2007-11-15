@@ -1,5 +1,0 @@
-RewriteEngine On
-RewriteCond		$1				(\.odt|\.pdf)
-#RewriteCond		$1				!(\.php)
-#RewriteCond		$1				-F
-RewriteRule		^([^/]*)$		stream.php?serve=$1
