@@ -1,0 +1,18 @@
+Very Basic Install instructions
+-------------------------------
+
+1. Place the php sources files under www/ directory of your webserver (Apache
+   is used in development)
+2. Feed a database with sample data provided in file susta.sql.bz2. You may use
+   either command line mysql tools or phpmyadmin interface. The latter is 
+   suggested for database manipulation. mysql-query-browser should do too.
+3. Have a look at include/config.inc.php. These file contains application wide
+   system settings. If those are not correct you can easily expect a non 
+   working app. Given that, some variables here may need to be properly set to 
+   match your installation. Comments are lacking there, but it  should be quite
+   straightforward.
+4. Support for PDF generation is provided through a dedicated OpenOffice.org   
+   instance running in background. Some packages and scripts are needed to 
+   achieve that in addition to control over start/stop of the service being 
+   provided. Expect more info on that soon.
+
