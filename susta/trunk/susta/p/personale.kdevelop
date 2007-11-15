@@ -1,0 +1,129 @@
+<?xml version = '1.0'?>
+<kdevelop>
+  <general>
+    <author>user,,,</author>
+    <email>signup@cheapweb.it</email>
+    <version>0.1</version>
+    <projectmanagement>KDevScriptProject</projectmanagement>
+    <primarylanguage>PHP</primarylanguage>
+    <keywords>
+      <keyword>PHP</keyword>
+    </keywords>
+    <ignoreparts>
+      <part>KDevClearCase</part>
+      <part>KDevcopyto</part>
+      <part>KDevCTags</part>
+      <part>CvsService</part>
+      <part>KDevDebugger</part>
+      <part>KDevDoxygen</part>
+      <part>KDevFileGroups</part>
+      <part>KDevdistpart</part>
+      <part>KDevPerforce</part>
+      <part>KDevVisualBoyAdvance</part>
+    </ignoreparts>
+    <projectdirectory>.</projectdirectory>
+    <absoluteprojectpath>false</absoluteprojectpath>
+    <description>Applicativo per la gestione degli incarichi e dei percorsi formativi del personale in Stival per la gestione della qualità.
+
+*** Descrizione da rivedere :P  ***</description>
+    <secondaryLanguages>
+      <language>SQL</language>
+    </secondaryLanguages>
+  </general>
+  <kdevscriptproject>
+    <general>
+      <activedir/>
+      <includepatterns>*.php,*.phps,*.php3,*.inc</includepatterns>
+      <excludepatterns>*~</excludepatterns>
+    </general>
+    <run>
+      <directoryradio>executable</directoryradio>
+    </run>
+  </kdevscriptproject>
+  <kdevdoctreeview>
+    <ignoretocs>
+      <toc>ada</toc>
+      <toc>ada_bugs_gcc</toc>
+      <toc>bash</toc>
+      <toc>bash_bugs</toc>
+      <toc>c++_bugs_gcc</toc>
+      <toc>clanlib</toc>
+      <toc>fortran_bugs_gcc</toc>
+      <toc>gnome1</toc>
+      <toc>gnustep</toc>
+      <toc>gtk</toc>
+      <toc>gtk_bugs</toc>
+      <toc>haskell</toc>
+      <toc>haskell_bugs_ghc</toc>
+      <toc>java_bugs_gcc</toc>
+      <toc>java_bugs_sun</toc>
+      <toc>kde2book</toc>
+      <toc>libc</toc>
+      <toc>libstdc++</toc>
+      <toc>opengl</toc>
+      <toc>pascal_bugs_fp</toc>
+      <toc>perl</toc>
+      <toc>perl_bugs</toc>
+      <toc>python</toc>
+      <toc>python_bugs</toc>
+      <toc>qt-kdev3</toc>
+      <toc>ruby</toc>
+      <toc>ruby_bugs</toc>
+      <toc>sdl</toc>
+      <toc>stl</toc>
+      <toc>sw</toc>
+      <toc>wxwidgets_bugs</toc>
+    </ignoretocs>
+    <ignoreqt_xml>
+      <toc>Guide to the Qt Translation Tools</toc>
+      <toc>Qt Assistant Manual</toc>
+      <toc>Qt Designer Manual</toc>
+      <toc>Qt Reference Documentation</toc>
+      <toc>qmake User Guide</toc>
+    </ignoreqt_xml>
+    <ignoredoxygen>
+      <toc>KDE Libraries (Doxygen)</toc>
+    </ignoredoxygen>
+  </kdevdoctreeview>
+  <kdevphpsupport>
+    <codeHelp>
+      <codeCompletion>true</codeCompletion>
+      <codeHinting>true</codeHinting>
+      <realtimeParsing>true</realtimeParsing>
+    </codeHelp>
+    <general>
+      <invocationMode>1</invocationMode>
+    </general>
+    <webInvocation>
+      <weburl>http://localhost/</weburl>
+      <webFileMode>1</webFileMode>
+      <defaultFile></defaultFile>
+    </webInvocation>
+    <shell>
+      <phpexe>/usr/local/bin/php</phpexe>
+    </shell>
+  </kdevphpsupport>
+  <kdevfilecreate>
+    <filetypes/>
+    <useglobaltypes>
+      <type ext="php" />
+    </useglobaltypes>
+  </kdevfilecreate>
+  <kdevfileview>
+    <groups>
+      <group pattern="*.php;*.phps;*.php3" name="PHP files" />
+      <group pattern="*.inc" name="Include files" />
+    </groups>
+  </kdevfileview>
+  <substmap>
+    <APPNAME>Personale</APPNAME>
+    <APPNAMELC>personale</APPNAMELC>
+    <APPNAMEUC>PERSONALE</APPNAMEUC>
+    <AUTHOR>user,,,</AUTHOR>
+    <EMAIL>signup@cheapweb.it</EMAIL>
+    <LICENSE>GPL</LICENSE>
+    <LICENSEFILE>COPYING</LICENSEFILE>
+    <VERSION>0.1</VERSION>
+    <dest>/var/www/stpersonal/personale</dest>
+  </substmap>
+</kdevelop>
