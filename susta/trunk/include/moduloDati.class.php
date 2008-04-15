@@ -50,7 +50,10 @@ class moduloDati extends PEAR {
      */
     var $_datiModulo        = array();
 
-
+	/**
+	* costruttore
+	* @param &base Oggetto di classe base che supporta la gestione delle sessioni
+	*/
     function moduloDati( &$baseObj ) {
         
         // inizializzazione
@@ -72,11 +75,12 @@ class moduloDati extends PEAR {
 		// aggancio i dati del modulo dalla sessione
 
 		$this->_datiModulo =& $this->_session['dati'];
+		$this->_datiModulo or $this->_datiModulo = array(); 
 
-        $this->_datiModulo = array_merge( $this->_datiModulo, $_POST );
+		$this->_datiModulo = array_merge( $this->_datiModulo, $_POST );
 
 		$this->_status =& $this->_session['_status'];
-//        evid($this->_datiModulo);
+
         
 //        evid( $this->_status );
 //        evid( $this->_session );
@@ -358,5 +362,10 @@ class moduloDati extends PEAR {
     
 }
 
+/*
+Local Variables:
+mode: php
 
+
+*/
 ?>
