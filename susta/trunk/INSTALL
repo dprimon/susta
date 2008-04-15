@@ -3,12 +3,15 @@ Very Basic Install instructions
 
 1. Place the php sources files under www/ directory of your webserver (Apache
    is used in development, lighttpd seems to work too)
-2. Create and populate a database with sample data provided in file sample_db/susta.sql.bz2.
+2. Create and populate a database with sample data provided in file 
+   sample_db/susta.sql.bz2.
    You may use either command line mysql tools or the phpmyadmin web interface.
    mysql-query-browser may come handy after installation for record manipulation.
-   Here is a way to install the db named susta supposing you're using mysql from the bash prompt
+   Here is a way to install the db named susta supposing you're using mysql from 
+   the bash prompt
 
-	daniele@bee:/var/www/susta/sample_db# (cat <<SQL ; bzcat susta.sql.bz2  ; cat <<SQL2) | mysql -uyourusername -p
+	daniele@bee:/var/www/susta/sample_db# (cat <<SQL ; bzcat susta.sql.bz2 \
+	 ; cat <<SQL2) | mysql -uyourusername -p
 	CREATE DATABASE susta;
 	USE susta;
 	SQL

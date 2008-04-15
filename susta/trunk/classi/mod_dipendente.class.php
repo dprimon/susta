@@ -117,6 +117,7 @@ class mod_dipendente extends moduloDati {
         
 //        evid($campi);
         $_POST = array_merge($_POST, $campi);
+// 		$this->_datiModulo or $this->_datiModulo = array(); // ciocco
         $this->_datiModulo = array_merge( $this->_datiModulo, $_POST );
         
 		// sistema i dati per la presentazione

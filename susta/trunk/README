@@ -8,6 +8,8 @@ Overview
 This is a brief readme of an enviroment being built for a web app adressing 
 basic human resource needs. The workflow has been thought to provide a 
 reasonably simple and uncluttered user experience. 
+Design sure leave a lot to be desired, but it should meet the modularity 
+and usability a *nix user is acquainted with.
 
 License
 -------
@@ -17,18 +19,49 @@ See COPYING
 
 System Requirements
 -------------------
+System requirements are met by those needed by the individual 
+software applications needed to run susta.
+The original platform of the development was able to run:
+
+* Apache 2.x
+* PHP 4.3
+* MySQL 3.3
+* OpenOffice.org 2.0.x (if PDF output is desired)
+
+Later versions of the above ones may need some tweaking, in general they 
+just runs with no issues. The resource usage is the result of the 
+combination of the programs running together. OpenOffice is probably the 
+component with the more impact.
+
+Also others, software maybe used. In particular, I've run - although not 
+fully tested - those:
+
+* lighttpd
+* PHP 5
+* MySQL 4
+
 
 Installation
 ------------
 
 Look at INSTALL file for installation instructions
 
+Support
+-------
+Support is given on author's availability. Send a mail at the adress on the 
+bottom of this file or use the mailing lists or other facilities at 
+http://sourceforge.net/projects/susta.
+
 
 TODO
 ----
-Include documentation OpenOffice.org setup for PDF generation.
+Include documentation OpenOffice.org setup for PDF generation. 
+Consider adding other databases backends such as PostgreSql or SQLite.
 
 
-
+Disclaimer
+----------
+No warranty of any kind is provided nor implied. Refer to the GPL v2+ as 
+published by the Free Software Foundation for more informations.
 
 (C) 2006. Daniele Primon <ledebass at gmail dot com>

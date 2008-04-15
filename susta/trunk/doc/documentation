@@ -1,0 +1,88 @@
+ Documentation
+===============
+
+This is the documentation intended for people interested in studying or
+getting theyr hands on the code.
+I try to give here a broad picture of the state of current implementation
+which will hopefully lead to fix of weak choices, mistakes or improvements
+where it'll be needed.
+
+Code is written in a hybrid way: not just a script, nor a full object oriented
+stack. This may need more than just an effort to be understood but, as the
+whole application is quite small, it can be summarized quite concisely thus
+it shouldn't be much hard to encompass.
+
+The approach being taken could be seen as a combination of two parts of code.
+The first part, is a work of mine towards what would have been a web framework
+for portals that never really grew as I wanted, but that I occasionally still use
+for small websites development, is a class which implements a basic management
+of a website barebone. That's to say you want to have a recurring header or footer
+in your pages, or a subset of them and you are thus allowed to manage that kind
+of thungs in single file transparently share by a set of pages. It is not just a
+mere includes, by the fact it is not as fragmented, and it draws a distinct line
+between the pages sharing that common bone.
+
+I guess it's more an hack than a real solution, anyway it shall be described like
+the following diagram
+
+public page served				bone
+----------------------------------------------------------
+mod_dipendente.php		}
+mod_licenzia.php		}		struttura.inc.php
+mod_ruoli.php			}
+                        ^
+						|
+						+---	"glue"
+
+
+The "glue" or "common bone" provided by class 'struttura'
+(located in include/struttura.class.php), is instantiated at the beginning of
+the code of a public page served.
+
+Second part of the code, is the one effectively written for this program.
+Since the application framework target is aimed it has been written an object
+oriented approch to form management between pages which shall give the flexibility
+to go back and forth between form or management pages while retaining task
+pertinent informations.
+A model was deemed necessary for that objective.
+
+Since the need to deal with basic sql queries to a database server, I, again
+took some code I wrote which eventually accompained the "glue" code used for
+the presentation and served as a an abstraction from the bare facilities
+provided by php to fullfill database service needed. Moreover that code
+(actually a class located at include/base.class.php) introduced sessions and
+a configuration file support (include/config.inc.php).
+
+Back to the form management topic, the intended model sees a  moduleClass
+object which is instantiated specifyng the base class object, being previously
+instantiated on a per page basis. This code take care of form related duties.
+An aprozimative diagram of one workflow scenario could be:
+
++------- mod_dipendente.php -----------------------------+
+|                                                        |
+|       +-------------+                                  |
+|       |  struttura  |                                  |
+|       +-------------+                                  |
+|                                                        |
+|		+----------+                                     |
+|		|   base   |----------+                          |
+|		+----------+          |                          |
+|		                      |                          |
+|		+-------------------------------------------+    |
+|		|  moduleClass child's class mod_dipendente |    |
+|		+-------------------------------------------+    |
+|                                                        |
+| <html>                                                 |
+|    ...                                                 |
+| </html>                                                |
+|                                                        |
++--------------------------------------------------------+
+
+ Reports handling
+==================
+
+As of this writing reports handling is going under some rationalization.
+More to be described on that.
+-- TODO
+
+
