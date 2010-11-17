@@ -4,41 +4,31 @@
  *
  * To change the template for this generated file go to
  * Window - Preferences - PHPeclipse - PHP - Code Templates
+ * 
+ * @author: Daniele Primon
  */
 
-
-
-
-
-require_once "include/struttura.class.php";
+require_once("include/struttura.class.php");
+require_once("classi/stpersonal.class.php");
 
 $pagina = new struttura();
-
-
-require_once("classi/stpersonal.class.php");
 
 $stpers =& new stpersonal(); 
 
 $modulo =& $stpers->moduloDati('mod_dipendente');
 
-
 $pageName = @$_REQUEST['id'] ? 'Modifica dipendente' : 'Nuovo dipendente'; 
 
 $pagina->setTitle( $pageName );
-
 ?>
-
 <div class="crumbline">
 	<a href="index.php">Home</a> - 
 	<a href="assunzione.php">Assunzione / modifica dati</a> - <?php echo $pageName ?>
 </div>
-
-  
+ 
 <?php 
 if ($modulo->visualizzabile()) { ?>
-
 <h2>Dati anagrafici</h2>
-
 <?php
 	if ($modulo->contieneErrori()) {
 ?>        
@@ -48,7 +38,6 @@ if ($modulo->visualizzabile()) { ?>
        <li><?php echo $messaggio ?></li>
 <?php 	} ?>
     </ul>
-      
       </div>
 <?php 	} ?>
   
@@ -59,9 +48,7 @@ if ($modulo->visualizzabile()) { ?>
 		<label for="nome">Nome</label>
 		<input type="text" value="<?php echo $_POST['nome']; ?>" id="nome" name="nome">
 
-<!--		<label for="eta">Di anni</label>
-		<input type="text" value="<?php echo $_POST['eta']; ?>" id="eta" name="eta">
--->		<br>
+		<br>
 
 		<label for="nascitaLuogo">Nato a</label>
 		<input type="text" value="<?php echo $_POST['nascitaLuogo']; ?>" id="nascitaLuogo" name="nascitaLuogo">
@@ -71,7 +58,7 @@ if ($modulo->visualizzabile()) { ?>
 
 		<label for="nascitaData" style="width: 2em">il</label>
 		<input type="text" style="width: 8em" value="<?php echo $_POST['nascitaData']; ?>" id="nascitaData" name="nascitaData">
-        <br>
+        	<br>
         
 		<label for="residenzaComune">Residente nel comune di</label>
 		<input type="text" value="<?php echo $_POST['residenzaComune']; ?>" id="residenzaComune" name="residenzaComune">
@@ -111,16 +98,10 @@ if ($modulo->visualizzabile()) { ?>
 <hr>
   <h2>Note finali</h2>
 	<textarea name="noteFinali" rows="3" cols="40" id="noteFinali"><?php echo $_POST['noteFinali']; ?></textarea>		
-
-		
-		<br>
-		<br>
-		<input type="submit" name="submit" value="Salva" onClick="return confirm('Sicuro di voler salvare?')">
-		<input type="reset" value="Annulla modifiche digitate">
-		
-		
-
-
+	<br>
+	<br>
+	<input type="submit" name="submit" value="Salva" onClick="return confirm('Sicuro di voler salvare?')">
+	<input type="reset" value="Annulla modifiche digitate">
 </form>
 
 <?php 
@@ -137,19 +118,12 @@ I dati su <?php echo $_POST['nome'] . " " .$_POST['cognome']  ?> sono stati memo
 <br>
 <br>
 <br>
-
 <a href="mod_ruolo.php?id=<?php echo $modulo->_session['campi']['id'] ?>">Modifica / reparto ruolo</a>
-
 <a href="reports.php?id=<?php echo $modulo->_session['campi']['id'] ?>">Scheda individuale</a>
-
  
 </p>
 
-
-
 <?php 
 }
-
 $pagina->display();
-
 ?>

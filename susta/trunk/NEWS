@@ -1,3 +1,17 @@
+29 set 2010
+ - Various clean up on code and removal of unneeded files. 
+ - Renamed recapititelefonici.php to lp_recapititelefonici.php.
+   Updated rp_recapititelefonici.php accordingly.
+ - Adjusted requirements on the README. 
+ - Added option for company name on configuration files (so
+   reports can display it). Added support for templating of reports 
+   headers.
+ - Minor reports templates changes (reports/modelli).
+ - Converted tbs_class.php and tbsooo_class.php to UTF-8.
+ - Added CREDITS
+
+
+24 apr 2008
 Lighttpd being supported. I've installed susta on my laptop and it runs as 
 expected.
 

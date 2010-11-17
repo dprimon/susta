@@ -4,10 +4,11 @@
  *
  * To change the template for this generated file go to
  * Window - Preferences - PHPeclipse - PHP - Code Templates
+ * 
+ * @author: Daniele Primon
  */
 
-
-require_once "include/struttura.class.php";
+require_once("include/struttura.class.php");
 
 require_once("classi/stpersonal.class.php");
 
@@ -15,17 +16,14 @@ $pagina = new struttura();
 
 $pagina->setTitle("Assunzione / modifica dati");
 
-
 $stpers =& new stpersonal();
 
-$personale = $stpers->elencoPersonale( );
-$exdipendenti = $stpers->elencoPersonaleAssunto( );
-
+$personale = $stpers->elencoPersonale();
+$exdipendenti = $stpers->elencoPersonaleAssunto();
 ?>
 <div class="crumbline">
 	<a href="index.php">Home</a> - Scheda Individuale
 </div>
-
 
 <table cellpadding="10" cellspacing="1" border="0" style="float:left">
    <tr>
@@ -36,9 +34,7 @@ $exdipendenti = $stpers->elencoPersonaleAssunto( );
    <tr>
      <td><a href="rp1_schedaindividuale.php?id=<?php echo $persona['id']?>"><?php echo $persona['cognome'] . " " . $persona['nome'] ; ?></a></td>
    </tr>
-
 <?php } ?>
-
 </table>
 
 <table cellpadding="10" cellspacing="1" border="0">
@@ -50,13 +46,9 @@ $exdipendenti = $stpers->elencoPersonaleAssunto( );
    <tr>
      <td><a href="rp1_schedaindividuale.php?id=<?php echo $persona['id']?>"><?php echo $persona['cognome'] . " " . $persona['nome'] ; ?></a></td>
    </tr>
-
 <?php } ?>
-
 </table>
-
 
 <?php 
 $pagina->display();
-
 ?>

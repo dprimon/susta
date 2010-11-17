@@ -4,6 +4,8 @@
  *
  * To change the template for this generated file go to
  * Window - Preferences - PHPeclipse - PHP - Code Templates
+ *
+ * @author: Daniele Primon
  */
 
 require_once("classi/stpersonal.class.php");
@@ -16,15 +18,17 @@ $params = array(
 	'tplFeed' => 
 		array(
 			array(
+				'method' => 'MergeField', 'params' => array( 'ditta', $dati['ditta'] ),
+			),
+			array(
 				'method' => 'MergeBlock', 'params' => array( 'dati', $dati['anagrafica'] ),
 			),
 		),
 	'dstFileName' => "Personale ruoli",
 );
 
-$stpers->MakeDocument( "personale ruoli.odt",  $params );
+$stpers->MakeDocument("personale ruoli.odt", $params);
 
 // richiedo dl del documento generato
-header( "Location: reports/{$params['dstFileName']}.{$_REQUEST['type']}" );
-
+header("Location: reports/{$params['dstFileName']}.{$_REQUEST['type']}");
 ?>

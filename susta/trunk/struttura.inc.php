@@ -1,10 +1,12 @@
 <?php 
-require_once("include/basekit.inc.php");
+/**
+* @author Daniele Primon
+*
+*/
+//require_once("include/basekit.inc.php");
 require_once("include/eSaConta.class.php");
 $counter =& new eSaConta();
-
-//print_r( $dati );
-
+$clockStart=time();
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -13,7 +15,7 @@ $counter =& new eSaConta();
 <?php 
 $this->printMeta(); 
 $this->printStylesheets();
- ?><script language="javascript" src="functions.js" type="text/javascript"></script>
+?><script language="javascript" src="functions.js" type="text/javascript"></script>
 <link href="style.css" rel="stylesheet" type="text/css">
 <!-- compliance patch for microsoft browsers -->
 <!--[if lt IE 7]>
@@ -28,10 +30,7 @@ $this->printStylesheets();
 <body>
  <a href="<?php echo $_SERVER['PHP_SELF']; ?>?logout=1" style="float: right;">Termina sessione</a>
   <h1>Sistema di gestione del personale</h1>
-
 <?php  $this->printContent(); ?>
-
-
 </body>
 </html>
 <!-- Pagina generata in <?php echo number_format((time()-$clockStart)/1000,6); ?> sec -->

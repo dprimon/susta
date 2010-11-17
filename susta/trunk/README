@@ -4,16 +4,15 @@ Sustainable web application evinroment
 
 Overview
 --------
-
 This is a brief readme of an enviroment being built for a web app adressing 
 basic human resource needs. The workflow has been thought to provide a 
 reasonably simple and uncluttered user experience. 
 Design sure leave a lot to be desired, but it should meet the modularity 
 and usability a *nix user is acquainted with.
 
+
 License
 -------
-
 See COPYING 
 
 
@@ -23,10 +22,11 @@ System requirements are met by those needed by the individual
 software applications needed to run susta.
 The original platform of the development was able to run:
 
-* Apache 2.x
-* PHP 4.3
+* Apache 2.x with mod_rewrite (Apache 1.x may work too, but it's untested).
+* PHP 4.3. This also needs PEAR and the DB package.
 * MySQL 3.3
 * OpenOffice.org 2.0.x (if PDF output is desired)
+* zip program (required for OpenDocument generation)
 
 Later versions of the above ones may need some tweaking, in general they 
 just runs with no issues. The resource usage is the result of the 
@@ -43,8 +43,8 @@ fully tested - those:
 
 Installation
 ------------
-
 Look at INSTALL file for installation instructions
+
 
 Support
 -------
