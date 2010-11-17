@@ -2,28 +2,24 @@
  CSS
  sabato 2 luglio 2005 18.29.13
  HAPedit 3.1.11.111
+ * @author: Daniele Primon
  * ------------------------------------ */
 
-
-
- a {
+a {
     display: block;
 }
 
-
 /*  stili per crumbline */
 .crumbline {
-   border: 1px dotted cyan;
+	border: 1px dotted darkgray;
+	padding: 4px 8px;
 	display: inline-block;
-	
 	margin: 1em;
 }
 
 .crumbline a {
 	display: inline;
 }
-
-
 
 table.dati tr:hover {
 	background: yellow;
@@ -38,9 +34,7 @@ table.dati tr:hover {
 }
 
 
-
 /* stili per moduli */
-
 form {
 	line-height: 2em; 
 }
@@ -50,7 +44,6 @@ form label {
 	width: 8em; 
 	margin: 0 1em 0 1em;
 }
-
 
 form input, textarea, select { 
 	display: block; float: left;
@@ -68,7 +61,6 @@ form .tre_campi {
 form .tre_label { 
 	width: 5em;
  }
-
 
 form br { clear: left }
 

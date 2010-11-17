@@ -2,7 +2,9 @@ Very Basic Install instructions
 -------------------------------
 
 1. Place the php sources files under www/ directory of your webserver (Apache
-   is used in development, lighttpd seems to work too)
+   is used in development, lighttpd seems to work too). Set permissions on tmp/ 
+   directory so that the www-data user can create files in there
+
 2. Create and populate a database with sample data provided in file 
    sample_db/susta.sql.bz2.
    You may use either command line mysql tools or the phpmyadmin web interface.
@@ -39,9 +41,22 @@ Very Basic Install instructions
    working app. Given that, some variables here may need to be properly set to 
    match your installation. Comments are straightforward.
 
-4. Support for PDF generation is provided through a dedicated OpenOffice.org   
+4. Be sure mod_rewrite is enabled. Moreover an "AllowOverride All" directive 
+   must be present on a <Directory> section of your site configuration.
+   For example:
+
+        <Directory /var/www/susta-0.1/reports/>
+                AllowOverride All
+                Order allow,deny
+                allow from all
+	        AllowOverride All
+	</Directory>
+
+   Your mileage may vary.
+
+5. Support for PDF generation is provided through a dedicated OpenOffice.org   
    instance running in background (tipically on a xvfb virtual framebuffer xserver).
    The setup includes a macro for OpenOffice Writer and an rc.d/ script which preloads
    the xvfb server with an instance of OpenOffice Writer.
-   See the wiki http://susta.wiki.sourceforge.net/ with instructions that covers a
-   Debian setup.
+   See the wiki http://susta.wiki.sourceforge.net/ with instructions that deals with
+   setting it up on Debian.

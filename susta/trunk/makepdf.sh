@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Author: Daniele Primon, Nicola Busanello
 echo -----------INIZIO
 date	#per debug
 

@@ -4,13 +4,10 @@
  *
  * To change the template for this generated file go to
  * Window - Preferences - PHPeclipse - PHP - Code Templates
+ * @author: Daniele Primon
  */
 
-
-
-
-
-require_once "include/struttura.class.php";
+require_once("include/struttura.class.php");
 require_once("classi/stpersonal.class.php");
 
 $pagina = new struttura();
@@ -19,16 +16,13 @@ $pagina->setTitle("Formazione / qualifiche");
 
 $stpers =& new stpersonal();
 
-$personale = $stpers->elencoPersonale( );
-
-
+$personale = $stpers->elencoPersonale();
 
 ?>
 <div class="crumbline">
 	<a href="index.php">Home</a> - 
 	Formazione / qualifiche
 </div>
-
 
 <table cellpadding="10" cellspacing="1" border="0">
    <tr>
@@ -44,8 +38,6 @@ $personale = $stpers->elencoPersonale( );
 
 </table>
 
-
 <?php 
 $pagina->display();
-
 ?>

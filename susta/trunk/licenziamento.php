@@ -4,23 +4,15 @@
  *
  * To change the template for this generated file go to
  * Window - Preferences - PHPeclipse - PHP - Code Templates
+ * @author: Daniele Primon
  */
 
-
-
-
-
-require_once "include/struttura.class.php";
-
+require_once("include/struttura.class.php");
 require_once("classi/stpersonal.class.php");
 
 $pagina = new struttura();
 
 $pagina->setTitle("Licenziamento");
-
-
-//require_once('include/basekit.inc.php');
-
 
 $stpers =& new stpersonal();
 
@@ -33,9 +25,7 @@ $personale = $stpers->elencoPersonale();
 	Licenziamento personale
 </div>
 
-
 <h2>Licenziamento personale</h2>
-	
 
 <table cellpadding="10" cellspacing="1" border="0">
    <tr>
@@ -48,12 +38,8 @@ $personale = $stpers->elencoPersonale();
    </tr>
 
 <?php } ?>
-
-
 </table>
 
 <?php 
-
 $pagina->display();
-
 ?>

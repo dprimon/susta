@@ -1,3 +1,7 @@
+/**
+* @author Daniele Primon
+* NOTE: Currently not used.
+*/
 
 function chk() {
 	if (document.forms[0].user.value=="") {
